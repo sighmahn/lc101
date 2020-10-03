@@ -1,34 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="28eba473-2b91-4328-9f89-996ccab2a410" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/hello-spring/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello-spring/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello-spring/.idea/hello-spring.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello-spring/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello-spring/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello-spring/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello-spring/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/java/javawebdevelopment/HelloWorld/HelloWorld.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/java/javawebdevelopment/Restaurant Menu/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/java/javawebdevelopment/Restaurant Menu/.idea/description.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/java/javawebdevelopment/Restaurant Menu/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/java/javawebdevelopment/Restaurant Menu/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/java/javawebdevelopment/Restaurant Menu/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/java/javawebdevelopment/Restaurant Menu/.idea/project-template.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/java/javawebdevelopment/Restaurant Menu/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/java/javawebdevelopment/Restaurant Menu/Restaurant Menu.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/java/javawebdevelopment/Restaurant Menu/src/Restaurant/Menu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/java/javawebdevelopment/Restaurant Menu/src/Restaurant/MenuItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/skills-tracker.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/skills-tracker/skills-tracker/src/main/java/org/launchcode/skillstracker/controllers/SkillsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOM-and-Events-Studio" beforeDir="false" afterPath="$PROJECT_DIR$/DOM-and-Events-Studio" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Fetch-and-JSON-Studio" beforeDir="false" afterPath="$PROJECT_DIR$/Fetch-and-JSON-Studio" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTTP-and-Forms-Studio" beforeDir="false" afterPath="$PROJECT_DIR$/HTTP-and-Forms-Studio" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/class for monday/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hello_world.js" beforeDir="false" afterPath="$PROJECT_DIR$/hello_world.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html-me-something" beforeDir="false" afterPath="$PROJECT_DIR$/html-me-something" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/typescript-lc101-projects" beforeDir="false" afterPath="$PROJECT_DIR$/typescript-lc101-projects" afterDir="false" />
+    <list default="true" id="685b8cca-7a4e-40af-a0ad-7415e9a369c7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/skills-trackerQuiz/.idea/kotlinc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skills-trackerQuiz/.idea/libraries/KotlinJavaRuntime.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skills-trackerQuiz/src/Questions" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/lc101.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular-lc101-mission-planner" beforeDir="false" afterPath="$PROJECT_DIR$/angular-lc101-mission-planner" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular-lc101-projects" beforeDir="false" afterPath="$PROJECT_DIR$/angular-lc101-projects" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular_practice/component-practice/src/app/task-list/angular-lc101-projects" beforeDir="false" afterPath="$PROJECT_DIR$/angular_practice/component-practice/src/app/task-list/angular-lc101-projects" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hello-spring/hello-spring/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/hello-spring/hello-spring/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/javawebdevelopment/java-web-dev-exercises" beforeDir="false" afterPath="$PROJECT_DIR$/java/javawebdevelopment/java-web-dev-exercises" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/javawebdevelopment/java-web-dev-studio7" beforeDir="false" afterPath="$PROJECT_DIR$/java/javawebdevelopment/java-web-dev-studio7" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/javawebdevelopment/java-web-dev-techjobs-oo" beforeDir="false" afterPath="$PROJECT_DIR$/java/javawebdevelopment/java-web-dev-techjobs-oo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/javawebdevelopment/junit-studio-lc101" beforeDir="false" afterPath="$PROJECT_DIR$/java/javawebdevelopment/junit-studio-lc101" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/javawebdevelopment/techjobs-console-java" beforeDir="false" afterPath="$PROJECT_DIR$/java/javawebdevelopment/techjobs-console-java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/perl.exe.stackdump" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/skills-trackerQuiz/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/skills-trackerQuiz/.idea/misc.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,22 +35,21 @@
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProjectId" id="1hhiVAUlSD36SlNct4gsRO9Aq5n" />
+  <component name="ProjectId" id="1iF49GdInLhnxLNvzrlT7el7vl3" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="28eba473-2b91-4328-9f89-996ccab2a410" name="Default Changelist" comment="" />
-      <created>1600469752923</created>
+      <changelist id="685b8cca-7a4e-40af-a0ad-7415e9a369c7" name="Default Changelist" comment="" />
+      <created>1601489853845</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1600469752923</updated>
+      <updated>1601489853845</updated>
     </task>
     <servers />
   </component>
