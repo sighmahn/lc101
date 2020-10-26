@@ -1,14 +1,17 @@
 package org.LaunchCode.codingevents.models;
 
-import javax.validation.constraints.Email;
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.Size;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.validation.constraints.*;
 import java.util.Objects;
 
+@Entity
 public class Event {
 
+    @Id
+    @GeneratedValue
     private int id;
-    private static int nextId = 1;
 
     @NotBlank(message = "Name is required")
     @Size(min = 3, max = 50, message = "Name must be between 3 and 50 characters")
@@ -26,11 +29,17 @@ public class Event {
 
     private EventType type;
 
+    @AssertTrue(message = "Must be True")
+    private boolean registrationRequired;
+
+    @Min(value = 1, message = "Must be at least one attendee")
+    private int attendees;
+
     public Event(String name, String description, String contactEmail, String eventLocation, EventType type) {
-        this();
         this.name = name;
         this.description = description;
         this.contactEmail = contactEmail;
+        this.type = type;
         this.eventLocation = eventLocation;
     }
 
@@ -38,9 +47,14 @@ public class Event {
         return eventLocation;
     }
 
-    public Event() {
-        this.id = nextId;
-        nextId++;
+    public Event() {}
+
+    public boolean isRegistrationRequired() {
+        return registrationRequired;
+    }
+
+    public void setRegistrationRequired(boolean registrationRequired) {
+        this.registrationRequired = registrationRequired;
     }
 
     public String getName() {
@@ -75,6 +89,14 @@ public class Event {
 
     public EventType getType() {
         return type;
+    }
+
+    public int getAttendees() {
+        return attendees;
+    }
+
+    public void setAttendees(int attendees) {
+        this.attendees = attendees;
     }
 
     public void setType(EventType type) {
