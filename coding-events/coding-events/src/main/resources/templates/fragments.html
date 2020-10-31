@@ -3,8 +3,9 @@
 <head th:fragment="head">
     <meta charset="UTF-8"/>
     <title>Coding Events</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" th:href="@{/styles.css}">
 </head>
 <body>
@@ -15,6 +16,9 @@
         <li class="nav-item"><a class="nav-link" href="/events">All Events</a></li>
         <li class="nav-item"><a class="nav-link" href="/events/create">Create Event</a></li>
         <li class="nav-item"><a class="nav-link" href="/events/delete">Delete Events</a></li>
+        <li class="nav-item"><a class="nav-link" href="/eventcategories">All Categories</a></li>
+        <li class="nav-item"><a class="nav-link" href="/tags">All Tags</a></li>
+        <li class="nav-item"><a class="nav-link" href="/eventcategories/create">Create Category</a></li>
     </ul>
 </nav>
 

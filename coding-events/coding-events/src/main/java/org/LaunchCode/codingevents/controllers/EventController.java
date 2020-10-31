@@ -1,8 +1,9 @@
 package org.LaunchCode.codingevents.controllers;
 
+import org.LaunchCode.codingevents.data.EventCategoryRepository;
 import org.LaunchCode.codingevents.data.EventRepository;
-import org.LaunchCode.codingevents.models.EventType;
 import org.LaunchCode.codingevents.models.Event;
+import org.LaunchCode.codingevents.models.EventCategory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -10,6 +11,7 @@ import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import java.util.Optional;
 
 @Controller
 @RequestMapping("events")
@@ -18,12 +20,26 @@ public class EventController {
     @Autowired
     private EventRepository eventRepository;
 
-
+    @Autowired
+    private EventCategoryRepository eventCategoryRepository;
 
     @GetMapping
-    public String displayAllEvents(Model model) {
-        model.addAttribute("title", "All Events");
-        model.addAttribute("events", eventRepository.findAll());
+    public String displayAllEvents(@RequestParam(required = false) Integer categoryId, Model model) {
+
+        if (categoryId == null) {
+            model.addAttribute("title", "All Events");
+            model.addAttribute("events", eventRepository.findAll());
+        } else {
+            Optional<EventCategory> result = eventCategoryRepository.findById(categoryId);
+            if (result.isEmpty()) {
+                model.addAttribute("title", "Invalid Category Id:" + categoryId);
+            } else {
+                EventCategory category = result.get();
+                model.addAttribute("title", "Events in category: " + category.getName());
+                model.addAttribute("events", category.getEvents());
+            }
+        }
+
         return "events/index";
     }
 
@@ -31,7 +47,7 @@ public class EventController {
     public String displayCreateEventForm(Model model) {
         model.addAttribute("title", "Create Event");
         model.addAttribute(new Event());
-        model.addAttribute("types", EventType.values());
+        model.addAttribute("categories", eventCategoryRepository.findAll());
         return "events/create";
     }
 
@@ -40,6 +56,7 @@ public class EventController {
                                          Errors errors, Model model) {
         if (errors.hasErrors()) {
             model.addAttribute("title", "Create Event");
+//            model.addAttribute("types", EventType.values());
             return "events/create";
         }
 
@@ -66,23 +83,41 @@ public class EventController {
         return "redirect:";
     }
 
-//    @GetMapping("edit/{eventId}")
-//    public String displayEditForm(Model model, @PathVariable int eventId) {
-//        //controller code will go here
-//        Event event = EventData.getById(eventId);
-//        model.addAttribute("event", event);
-//        if(event != null) {
-//            model.addAttribute("title", "Edit Event" + event.getName() + " (ID=" + event.getId() + ")");
-//        }
-//        return "events/edit";
-//    }
+    @GetMapping("edit/{eventId}")
+    public String displayEditForm(Model model, @PathVariable int eventId) {
+        //controller code will go here
+        Event event = eventRepository.findById(eventId).orElse(null);
 
-//    @PostMapping("edit")
-//    public String processEditForm(int eventId, String name, String description) {
-//        // controller code will go here
-//        Event event = eventRepository.findAll(eventId);
-//        event.setName(name);
+        model.addAttribute("event", event);
+        if(event != null) {
+            model.addAttribute("title", "Edit Event" + event.getName() + " (ID=" + event.getId() + ")");
+        }
+        return "events/edit";
+    }
+
+    @PostMapping("edit")
+    public String processEditForm(int eventId, String name, String description) {
+        // controller code will go here
+        Event event = eventRepository.findById(eventId).get();
+        event.setName(name);
 //        event.setDescription(description);
-//        return "redirect:";
-//    }
+        eventRepository.save(event);
+        return "redirect:";
+    }
+
+    @GetMapping("detail")
+    public String displayEventDetails(@RequestParam Integer eventId, Model model){
+
+        Optional<Event> result = eventRepository.findById(eventId);
+
+        if(result.isEmpty()) {
+            model.addAttribute("title", "Invalid Event ID " + eventId);
+        } else {
+            Event event = result.get();
+            model.addAttribute("title", event.getName() + " Details");
+            model.addAttribute("event", event);
+        }
+
+        return "event/detail";
+    }
 }
